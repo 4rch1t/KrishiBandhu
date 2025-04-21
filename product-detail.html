@@ -1,0 +1,810 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Handloom Cotton Saree - KrishiBandhu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="KrishiBandhu Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html" class="active">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="auth-buttons">
+                        <a href="login.html" class="btn btn-outline">Login</a>
+                        <a href="register.html" class="btn btn-primary">Register</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="product-detail">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="index.html"><i class="fas fa-home"></i> Home</a> 
+                <i class="fas fa-chevron-right"></i>
+                <a href="marketplace.html">Marketplace</a> 
+                <i class="fas fa-chevron-right"></i>
+                <a href="marketplace.html?category=textiles">Textiles</a> 
+                <i class="fas fa-chevron-right"></i>
+                <span>Handloom Cotton Saree</span>
+            </div>
+            
+            <div class="product-detail-grid">
+                <div class="product-images">
+                    <div class="main-image">
+                        <div class="image-badges">
+                            <span class="badge badge-sale">SALE</span>
+                            <span class="badge badge-handmade">HANDMADE</span>
+                        </div>
+                        <div class="image-zoom-container">
+                            <img src="images/product-3.jpg" alt="Handloom Cotton Saree" id="main-product-image">
+                            <div class="image-zoom-lens"></div>
+                        </div>
+                        <div class="image-controls">
+                            <button class="image-control" onclick="prevImage()"><i class="fas fa-chevron-left"></i></button>
+                            <button class="image-control" onclick="nextImage()"><i class="fas fa-chevron-right"></i></button>
+                        </div>
+                    </div>
+                    <div class="image-thumbnails">
+                        <img src="images/product-3.jpg" alt="Handloom Cotton Saree - Front" class="active" onclick="changeImage(this, 0)">
+                        <img src="images/product-3-2.jpg" alt="Handloom Cotton Saree - Detail" onclick="changeImage(this, 1)">
+                        <img src="images/product-3-3.jpg" alt="Handloom Cotton Saree - Folded" onclick="changeImage(this, 2)">
+                        <img src="images/product-3-4.jpg" alt="Handloom Cotton Saree - Worn" onclick="changeImage(this, 3)">
+                    </div>
+                </div>
+                
+                <div class="product-info">
+                    <div class="product-header">
+                        <h1>Handloom Cotton Saree</h1>
+                        <button class="wishlist-btn" title="Add to Wishlist">
+                            <i class="far fa-heart"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="product-meta">
+                        <div class="product-rating">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star-half-alt"></i>
+                            <span>4.7</span>
+                            <a href="#reviews" class="review-count">(23 reviews)</a>
+                        </div>
+                        <div class="product-id">Product ID: <span>#TXT-1023</span></div>
+                    </div>
+                    
+                    <div class="product-price">
+                        <div class="price-info">
+                            <span class="current-price">₹1,800</span>
+                            <span class="original-price">₹2,200</span>
+                            <span class="discount">18% Off</span>
+                        </div>
+                        <div class="stock-info in-stock">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </div>
+                    </div>
+                    
+                    <div class="product-short-desc">
+                        <p>Handwoven cotton saree crafted by skilled artisans from our women's Self-Help Group in Tamil Nadu using traditional techniques and natural dyes.</p>
+                    </div>
+                    
+                    <div class="seller-info">
+                        <div class="seller-profile">
+                            <img src="images/seller-avatar.jpg" alt="Seller Avatar">
+                            <div>
+                                <h3>Bunkar Mahila SHG</h3>
+                                <p><i class="fas fa-map-marker-alt"></i> Tamil Nadu</p>
+                                <div class="seller-rating">
+                                    <i class="fas fa-star"></i> 4.9 | <span>Member since 2021</span>
+                                </div>
+                            </div>
+                        </div>
+                        <button class="btn btn-outline video-call-btn">
+                            <i class="fas fa-video"></i> Request Live Video
+                        </button>
+                    </div>
+                    
+                    <div class="product-variants">
+                        <h3>Available Colors</h3>
+                        <div class="color-options">
+                            <div class="color-option active" style="background-color: #a83232;" data-color="Red">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="color-option" style="background-color: #32a852;" data-color="Green">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="color-option" style="background-color: #3232a8;" data-color="Blue">
+                                <i class="fas fa-check"></i>
+                            </div>
+                            <div class="color-option" style="background-color: #a88c32;" data-color="Gold">
+                                <i class="fas fa-check"></i>
+                            </div>
+                        </div>
+                        <p class="selected-variant">Selected: <span id="selected-color">Red</span></p>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <label for="quantity">Quantity:</label>
+                            <div class="quantity-controls">
+                                <button type="button" class="quantity-btn minus" onclick="decrementQuantity()">
+                                    <i class="fas fa-minus"></i>
+                                </button>
+                                <input type="number" id="quantity" value="1" min="1" max="10" class="quantity-input" onchange="updateQuantity(this.value)">
+                                <button type="button" class="quantity-btn plus" onclick="incrementQuantity()">
+                                    <i class="fas fa-plus"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="btn btn-primary add-to-cart">
+                                <i class="fas fa-shopping-cart"></i> Add to Cart
+                            </button>
+                            <button class="btn btn-secondary buy-now">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                    
+                    <div class="product-delivery">
+                        <div class="delivery-option">
+                            <i class="fas fa-truck"></i>
+                            <div>
+                                <h4>Free Delivery</h4>
+                                <p>Estimated: 5-7 days</p>
+                            </div>
+                        </div>
+                        <div class="delivery-option">
+                            <i class="fas fa-undo"></i>
+                            <div>
+                                <h4>Easy Returns</h4>
+                                <p>7-day return policy</p>
+                            </div>
+                        </div>
+                        <div class="delivery-option">
+                            <i class="fas fa-shield-alt"></i>
+                            <div>
+                                <h4>Secure Payment</h4>
+                                <p>Multiple options available</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-description">
+                        <div class="description-header">
+                            <h3>Product Description</h3>
+                            <button class="toggle-description" onclick="toggleDescription()">
+                                <i class="fas fa-chevron-down"></i>
+                            </button>
+                        </div>
+                        <div class="description-content">
+                            <p>This handwoven cotton saree is crafted by skilled artisans from our women's Self-Help Group in Tamil Nadu. Each saree takes approximately 3-4 days to complete on traditional handlooms.</p>
+                            <p>The saree features intricate traditional designs that have been passed down through generations. We use only natural dyes derived from plants and minerals, making each piece eco-friendly and unique in its color variations.</p>
+                            
+                            <div class="product-features">
+                                <h4>Features:</h4>
+                                <ul>
+                                    <li><i class="fas fa-check-circle"></i> 100% handwoven cotton</li>
+                                    <li><i class="fas fa-check-circle"></i> Natural dyes (no chemicals)</li>
+                                    <li><i class="fas fa-check-circle"></i> Traditional designs</li>
+                                    <li><i class="fas fa-check-circle"></i> Length: 5.5 meters</li>
+                                    <li><i class="fas fa-check-circle"></i> Width: 48 inches</li>
+                                    <li><i class="fas fa-check-circle"></i> Includes matching blouse piece</li>
+                                </ul>
+                            </div>
+                            
+                            <div class="product-care">
+                                <h4>Care Instructions:</h4>
+                                <ul>
+                                    <li><i class="fas fa-tint"></i> Hand wash in cold water</li>
+                                    <li><i class="fas fa-sun"></i> Dry in shade</li>
+                                    <li><i class="fas fa-ban"></i> Do not bleach</li>
+                                    <li><i class="fas fa-iron"></i> Iron on medium heat</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="product-tabs">
+                <div class="tab-buttons">
+                    <button class="tab-btn active" data-tab="reviews">Customer Reviews</button>
+                    <button class="tab-btn" data-tab="shipping">Shipping & Returns</button>
+                    <button class="tab-btn" data-tab="seller">About the Seller</button>
+                </div>
+                
+                <div class="tab-content">
+                    <div class="tab-pane active" id="reviews">
+                        <div class="reviews-summary">
+                            <div class="overall-rating">
+                                <h3>4.7</h3>
+                                <div class="stars">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                                <p>Based on 23 reviews</p>
+                            </div>
+                            <div class="rating-breakdown">
+                                <div class="rating-bar">
+                                    <span>5 stars</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 70%;"></div>
+                                    </div>
+                                    <span>16</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>4 stars</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 20%;"></div>
+                                    </div>
+                                    <span>5</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>3 stars</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 10%;"></div>
+                                    </div>
+                                    <span>2</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>2 stars</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 0%;"></div>
+                                    </div>
+                                    <span>0</span>
+                                </div>
+                                <div class="rating-bar">
+                                    <span>1 star</span>
+                                    <div class="progress-bar">
+                                        <div class="progress" style="width: 0%;"></div>
+                                    </div>
+                                    <span>0</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="reviews-list">
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <img src="images/customer-1.jpg" alt="Customer">
+                                        <div>
+                                            <h4>Priya Patel</h4>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">2 weeks ago</div>
+                                </div>
+                                <p class="review-text">The saree is absolutely beautiful! The craftsmanship is excellent and the natural dyes give it a unique look. I had a video call with the seller before purchasing, which helped me see the texture and colors more clearly. Highly recommend!</p>
+                                <div class="review-photos">
+                                    <img src="images/review-photo-1.jpg" alt="Customer Photo">
+                                    <img src="images/review-photo-2.jpg" alt="Customer Photo">
+                                </div>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <img src="images/customer-2.jpg" alt="Customer">
+                                        <div>
+                                            <h4>Rajiv Sharma</h4>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="far fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">1 month ago</div>
+                                </div>
+                                <p class="review-text">Bought this as a gift for my wife. She loves the traditional design and the quality of the cotton. The colors are vibrant and the saree drapes beautifully. The only minor issue was that delivery took a bit longer than expected.</p>
+                            </div>
+                            
+                            <div class="review-item">
+                                <div class="review-header">
+                                    <div class="reviewer">
+                                        <img src="images/customer-3.jpg" alt="Customer">
+                                        <div>
+                                            <h4>Anita Desai</h4>
+                                            <div class="rating">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="review-date">2 months ago</div>
+                                </div>
+                                <p class="review-text">I'm so happy to support these rural artisans directly. The saree is gorgeous and knowing that it was handwoven makes it even more special. The video call feature was amazing - I got to meet the women who made my saree and hear their story.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="pagination">
+                            <a href="#" class="active">1</a>
+                            <a href="#">2</a>
+                            <a href="#">3</a>
+                            <a href="#"><i class="fas fa-chevron-right"></i></a>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="shipping">
+                        <div class="shipping-info">
+                            <h3>Shipping Information</h3>
+                            <p>We ship all products directly from our rural producers to you, cutting out middlemen and ensuring that artisans receive fair compensation for their work.</p>
+                            
+                            <div class="shipping-details">
+                                <div class="shipping-item">
+                                    <h4><i class="fas fa-truck"></i> Delivery Time</h4>
+                                    <p>Standard delivery: 5-7 business days across India</p>
+                                    <p>Express delivery (where available): 2-3 business days</p>
+                                </div>
+                                
+                                <div class="shipping-item">
+                                    <h4><i class="fas fa-money-bill-wave"></i> Shipping Costs</h4>
+                                    <p>Free shipping on orders above ₹1,500</p>
+                                    <p>Standard shipping: ₹100 for orders below ₹1,500</p>
+                                    <p>Express shipping: Additional ₹150</p>
+                                </div>
+                                
+                                <div class="shipping-item">
+                                    <h4><i class="fas fa-map-marker-alt"></i> Delivery Areas</h4>
+                                    <p>We deliver to all major cities and most rural areas across India. Some remote locations may require additional delivery time.</p>
+                                </div>
+                            </div>
+                            
+                            <h3>Return Policy</h3>
+                            <p>We want you to be completely satisfied with your purchase. If you're not happy with your product, we offer a simple return process.</p>
+                            
+                            <div class="return-details">
+                                <div class="return-item">
+                                    <h4><i class="fas fa-undo"></i> Return Window</h4>
+                                    <p>You can return most items within 7 days of delivery for a full refund.</p>
+                                </div>
+                                
+                                <div class="return-item">
+                                    <h4><i class="fas fa-exclamation-circle"></i> Return Conditions</h4>
+                                    <p>Items must be unused, unworn, and in their original packaging with all tags attached.</p>
+                                    <p>Handmade items with minor variations in color or pattern are not eligible for return unless defective.</p>
+                                </div>
+                                
+                                <div class="return-item">
+                                    <h4><i class="fas fa-exchange-alt"></i> Return Process</h4>
+                                    <p>1. Contact our customer service within 7 days of receiving your order</p>
+                                    <p>2. Fill out the return form provided by our team</p>
+                                    <p>3. Pack the item securely in its original packaging</p>
+                                    <p>4. Our logistics partner will collect the item from your address</p>
+                                    <p>5. Refund will be processed within 7-10 business days after inspection</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="tab-pane" id="seller">
+                        <div class="seller-profile-full">
+                            <div class="seller-header">
+                                <div class="seller-avatar">
+                                    <img src="images/seller-avatar.jpg" alt="Seller Avatar">
+                                </div>
+                                <div class="seller-details">
+                                    <h2>Bunkar Mahila SHG</h2>
+                                    <p class="seller-location"><i class="fas fa-map-marker-alt"></i> Kanchipuram, Tamil Nadu</p>
+                                    <div class="seller-stats">
+                                        <div class="stat">
+                                            <span class="stat-value">4.9</span>
+                                            <span class="stat-label">Rating</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-value">98%</span>
+                                            <span class="stat-label">Positive Feedback</span>
+                                        </div>
+                                        <div class="stat">
+                                            <span class="stat-value">2+ years</span>
+                                            <span class="stat-label">On Platform</span>
+                                        </div>
+                                    </div>
+                                    <button class="btn btn-primary video-call-btn">
+                                        <i class="fas fa-video"></i> Request Live Video
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <div class="seller-story">
+                                <h3>Our Story</h3>
+                                <p>Bunkar Mahila SHG (Women Weavers Self-Help Group) was formed in 2018 by 15 women from Kanchipuram district in Tamil Nadu. Most of our members come from traditional weaving families who have been practicing this craft for generations.</p>
+                                <p>Our group was formed to preserve the traditional handloom techniques of our region while providing sustainable livelihoods for women in our community. We specialize in cotton and silk sarees using traditional designs and natural dyeing processes.</p>
+                                <p>Through KrishiBandhu, we have been able to reach customers directly across India and receive fair prices for our work. This has helped us improve our families' living standards and send our children to school.</p>
+                                
+                                <div class="seller-gallery">
+                                    <img src="images/seller-gallery-1.jpg" alt="Women working on handloom">
+                                    <img src="images/seller-gallery-2.jpg" alt="Natural dyeing process">
+                                    <img src="images/seller-gallery-3.jpg" alt="Group members">
+                                </div>
+                            </div>
+                            
+                            <div class="seller-products">
+                                <h3>More Products from this Seller</h3>
+                                <div class="product-grid small-grid">
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="images/related-product-1.jpg" alt="Cotton Dupatta">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Handwoven Cotton Dupatta</h4>
+                                            <div class="product-price">₹650</div>
+                                            <a href="#" class="btn btn-sm">View</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="images/related-product-2.jpg" alt="Silk Saree">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Traditional Silk Saree</h4>
+                                            <div class="product-price">₹4,500</div>
+                                            <a href="#" class="btn btn-sm">View</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="images/related-product-3.jpg" alt="Table Runner">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Handwoven Table Runner</h4>
+                                            <div class="product-price">₹850</div>
+                                            <a href="#" class="btn btn-sm">View</a>
+                                        </div>
+                                    </div>
+                                    <div class="product-card">
+                                        <div class="product-image">
+                                            <img src="images/related-product-4.jpg" alt="Cotton Stole">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Natural Dyed Cotton Stole</h4>
+                                            <div class="product-price">₹750</div>
+                                            <a href="#" class="btn btn-sm">View</a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <a href="seller-shop.html?id=bunkar-mahila" class="btn btn-outline view-all-btn">View All Products</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="related-products">
+                <h2>You May Also Like</h2>
+                <div class="product-grid">
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-7.jpg" alt="Handloom Scarf">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Handwoven Cotton Scarf</h3>
+                            <div class="product-meta">
+                                <span class="seller">Bunkar Mahila SHG, Tamil Nadu</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                            </div>
+                            <div class="product-price">₹550</div>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-outline">View Details</a>
+                                <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-8.jpg" alt="Silk Saree">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Handloom Silk Saree</h3>
+                            <div class="product-meta">
+                                <span class="seller">Silk Weavers Collective, Karnataka</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                            </div>
+                            <div class="product-price">₹4,200</div>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-outline">View Details</a>
+                                <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-9.jpg" alt="Cotton Kurta">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Hand-Block Printed Kurta</h3>
+                            <div class="product-meta">
+                                <span class="seller">Grameen Kala SHG, Rajasthan</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                            </div>
+                            <div class="product-price">₹950</div>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-outline">View Details</a>
+                                <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-card">
+                        <div class="product-image">
+                            <img src="images/product-10.jpg" alt="Jute Bag">
+                        </div>
+                        <div class="product-details">
+                            <h3 class="product-title">Handcrafted Jute Bag</h3>
+                            <div class="product-meta">
+                                <span class="seller">Eco Crafters SHG, West Bengal</span>
+                                <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                            </div>
+                            <div class="product-price">₹450</div>
+                            <div class="product-actions">
+                                <a href="#" class="btn btn-outline">View Details</a>
+                                <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Are You a Rural Producer?</h2>
+            <p>Join KrishiBandhu today and connect directly with buyers across India. Showcase your products and grow your business.</p>
+            <div class="cta-buttons">
+                <a href="seller-register.html" class="btn btn-primary">Register as Seller</a>
+                <a href="seller-guide.html" class="btn btn-outline">Learn How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>KrishiBandhu</h3>
+                    <p>Empowering rural communities through digital connectivity and direct market access.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Sellers</h3>
+                    <ul>
+                        <li><a href="seller-register.html">Register</a></li>
+                        <li><a href="seller-guide.html">Seller Guide</a></li>
+                        <li><a href="seller-dashboard.html">Dashboard</a></li>
+                        <li><a href="seller-support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Buyers</h3>
+                    <ul>
+                        <li><a href="buyer-register.html">Register</a></li>
+                        <li><a href="buyer-guide.html">Buyer Guide</a></li>
+                        <li><a href="buyer-dashboard.html">Dashboard</a></li>
+                        <li><a href="buyer-support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 KrishiBandhu. All rights reserved.</p>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Product Image Gallery
+        let currentImageIndex = 0;
+        const images = [
+            'images/product-3.jpg',
+            'images/product-3-2.jpg',
+            'images/product-3-3.jpg',
+            'images/product-3-4.jpg'
+        ];
+        
+        function changeImage(thumbnail, index) {
+            // Update main image
+            document.getElementById('main-product-image').src = thumbnail.src;
+            
+            // Update active thumbnail
+            document.querySelectorAll('.image-thumbnails img').forEach(img => {
+                img.classList.remove('active');
+            });
+            thumbnail.classList.add('active');
+            
+            // Update current index
+            currentImageIndex = index;
+        }
+        
+        function nextImage() {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateMainImage();
+        }
+        
+        function prevImage() {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateMainImage();
+        }
+        
+        function updateMainImage() {
+            document.getElementById('main-product-image').src = images[currentImageIndex];
+            
+            // Update active thumbnail
+            document.querySelectorAll('.image-thumbnails img').forEach((img, index) => {
+                if (index === currentImageIndex) {
+                    img.classList.add('active');
+                } else {
+                    img.classList.remove('active');
+                }
+            });
+        }
+        
+        // Quantity Controls
+        function incrementQuantity() {
+            const input = document.getElementById('quantity');
+            const currentValue = parseInt(input.value);
+            if (currentValue < 10) {
+                input.value = currentValue + 1;
+                updateQuantity(input.value);
+            }
+        }
+        
+        function decrementQuantity() {
+            const input = document.getElementById('quantity');
+            const currentValue = parseInt(input.value);
+            if (currentValue > 1) {
+                input.value = currentValue - 1;
+                updateQuantity(input.value);
+            }
+        }
+        
+        function updateQuantity(value) {
+            // You can add additional logic here if needed
+            console.log('Quantity updated to: ' + value);
+        }
+        
+        // Initialize page functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            // Color Selection
+            const colorOptions = document.querySelectorAll('.color-option');
+            
+            colorOptions.forEach(option => {
+                option.addEventListener('click', function() {
+                    // Remove active class from all options
+                    colorOptions.forEach(opt => opt.classList.remove('active'));
+                    
+                    // Add active class to clicked option
+                    this.classList.add('active');
+                    
+                    // Update selected color text
+                    const selectedColor = this.getAttribute('data-color');
+                    document.getElementById('selected-color').textContent = selectedColor;
+                });
+            });
+            
+            // Wishlist button functionality
+            const wishlistBtn = document.querySelector('.wishlist-btn');
+            wishlistBtn.addEventListener('click', function() {
+                const icon = this.querySelector('i');
+                
+                if (icon.classList.contains('far')) {
+                    icon.classList.remove('far');
+                    icon.classList.add('fas');
+                    this.style.color = '#ff6b6b';
+                } else {
+                    icon.classList.remove('fas');
+                    icon.classList.add('far');
+                    this.style.color = '#ccc';
+                }
+            });
+            
+            // Product tabs
+            const tabButtons = document.querySelectorAll('.tab-btn');
+            const tabPanes = document.querySelectorAll('.tab-pane');
+            
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    // Remove active class from all buttons and panes
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabPanes.forEach(pane => pane.classList.remove('active'));
+                    
+                    // Add active class to clicked button
+                    this.classList.add('active');
+                    
+                    // Show corresponding tab pane
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(tabId).classList.add('active');
+                });
+            });
+            
+            // Initialize image zoom effect
+            const zoomContainer = document.querySelector('.image-zoom-container');
+            const mainImage = document.getElementById('main-product-image');
+            
+            if (zoomContainer) {
+                zoomContainer.addEventListener('mousemove', function(e) {
+                    const { left, top, width, height } = this.getBoundingClientRect();
+                    const x = (e.clientX - left) / width;
+                    const y = (e.clientY - top) / height;
+                    
+                    mainImage.style.transformOrigin = `${x * 100}% ${y * 100}%`;
+                });
+                
+                zoomContainer.addEventListener('mouseenter', function() {
+                    mainImage.style.transform = 'scale(1.5)';
+                });
+                
+                zoomContainer.addEventListener('mouseleave', function() {
+                    mainImage.style.transform = 'scale(1)';
+                });
+            }
+        });
+        
+        // Toggle product description
+        function toggleDescription() {
+            const content = document.querySelector('.description-content');
+            const icon = document.querySelector('.toggle-description i');
+            
+            if (content.style.display === 'none') {
+                content.style.display = 'block';
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                content.style.display = 'none';
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        }
+    </script>
+</body>
+</html>

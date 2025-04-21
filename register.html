@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - KrishiBandhu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="KrishiBandhu Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="auth-buttons">
+                        <a href="login.html" class="btn btn-outline">Login</a>
+                        <a href="register.html" class="btn btn-primary active">Register</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="auth-section">
+        <div class="container">
+            <div class="auth-container">
+                <div class="auth-header">
+                    <img src="images/logo.png" alt="KrishiBandhu Logo" class="auth-logo">
+                    <h2>Join KrishiBandhu</h2>
+                    <p class="auth-subtitle">Create an account to connect with rural artisans</p>
+                </div>
+                
+                <div class="account-type-selector">
+                    <div class="account-type-tabs">
+                        <button class="account-tab active" data-type="buyer">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span>I am a Buyer</span>
+                        </button>
+                        <button class="account-tab" data-type="seller">
+                            <i class="fas fa-store"></i>
+                            <span>I am a Seller</span>
+                        </button>
+                    </div>
+                </div>
+                
+                <form action="#" method="post" class="auth-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-user"></i>
+                                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-envelope"></i>
+                                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-phone"></i>
+                                <input type="tel" id="phone" name="phone" class="form-control" placeholder="Enter your phone number" required>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row two-columns">
+                        <div class="form-group">
+                            <label for="password">Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="password" name="password" class="form-control" placeholder="Create password" required>
+                                <button type="button" class="password-toggle" onclick="togglePassword('password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="confirm-password">Confirm Password</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-lock"></i>
+                                <input type="password" id="confirm-password" name="confirm-password" class="form-control" placeholder="Confirm password" required>
+                                <button type="button" class="password-toggle" onclick="togglePassword('confirm-password')">
+                                    <i class="fas fa-eye"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Seller-specific fields (hidden by default) -->
+                    <div class="seller-fields" style="display: none;">
+                        <div class="form-group">
+                            <label for="organization">Organization/SHG Name</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-building"></i>
+                                <input type="text" id="organization" name="organization" class="form-control" placeholder="Enter organization name">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="organization-type">Organization Type</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-tag"></i>
+                                <select id="organization-type" name="organization-type" class="form-control">
+                                    <option value="">Select Type</option>
+                                    <option value="shg">Self-Help Group</option>
+                                    <option value="farmer">Individual Farmer</option>
+                                    <option value="cooperative">Farmer Cooperative</option>
+                                    <option value="artisan">Artisan/Craftsperson</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="location">Location</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <input type="text" id="location" name="location" class="form-control" placeholder="Village, District, State">
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="products">Products You Sell</label>
+                            <div class="input-with-icon">
+                                <i class="fas fa-box"></i>
+                                <select id="products" name="products" class="form-control" multiple>
+                                    <option value="agriculture">Agricultural Products</option>
+                                    <option value="handicrafts">Handicrafts</option>
+                                    <option value="textiles">Textiles & Clothing</option>
+                                    <option value="food">Processed Food Items</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            <small class="form-text">Hold Ctrl/Cmd to select multiple options</small>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group terms-checkbox">
+                        <div class="custom-checkbox">
+                            <input type="checkbox" id="terms" name="terms" required>
+                            <label for="terms">I agree to the <a href="terms.html">Terms of Service</a> and <a href="privacy.html">Privacy Policy</a></label>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary btn-block">Create Account <i class="fas fa-arrow-right"></i></button>
+                    </div>
+                </form>
+                
+                <div class="form-divider">
+                    <span>or sign up with</span>
+                </div>
+                
+                <div class="social-login">
+                    <button type="button" class="social-btn google">
+                        <i class="fab fa-google"></i>
+                    </button>
+                    <button type="button" class="social-btn facebook">
+                        <i class="fab fa-facebook-f"></i>
+                    </button>
+                    <button type="button" class="social-btn apple">
+                        <i class="fab fa-apple"></i>
+                    </button>
+                </div>
+                
+                <div class="form-footer">
+                    <p>Already have an account? <a href="login.html">Login</a></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <script>
+        function togglePassword(inputId) {
+            const passwordInput = document.getElementById(inputId);
+            const icon = event.currentTarget.querySelector('i');
+            
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                icon.classList.remove('fa-eye');
+                icon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                icon.classList.remove('fa-eye-slash');
+                icon.classList.add('fa-eye');
+            }
+        }
+    </script>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>KrishiBandhu</h3>
+                    <p>Empowering rural communities through digital connectivity and direct market access.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Sellers</h3>
+                    <ul>
+                        <li><a href="seller-register.html">Register</a></li>
+                        <li><a href="seller-guide.html">Seller Guide</a></li>
+                        <li><a href="seller-dashboard.html">Dashboard</a></li>
+                        <li><a href="seller-support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Buyers</h3>
+                    <ul>
+                        <li><a href="buyer-register.html">Register</a></li>
+                        <li><a href="buyer-guide.html">Buyer Guide</a></li>
+                        <li><a href="buyer-dashboard.html">Dashboard</a></li>
+                        <li><a href="buyer-support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 KrishiBandhu. All rights reserved.</p>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Toggle between buyer and seller registration forms
+        document.addEventListener('DOMContentLoaded', function() {
+            const accountTabs = document.querySelectorAll('.account-tab');
+            const sellerFields = document.querySelector('.seller-fields');
+            
+            accountTabs.forEach(tab => {
+                tab.addEventListener('click', function() {
+                    // Remove active class from all tabs
+                    accountTabs.forEach(t => t.classList.remove('active'));
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+                    
+                    // Show/hide seller fields based on selected tab
+                    if (this.getAttribute('data-type') === 'seller') {
+                        sellerFields.style.display = 'block';
+                    } else {
+                        sellerFields.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>

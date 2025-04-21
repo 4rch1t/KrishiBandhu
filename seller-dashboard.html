@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seller Dashboard - KrishiBandhu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="KrishiBandhu Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="user-menu">
+                        <a href="#" class="user-menu-btn">
+                            <img src="images/user-avatar.jpg" alt="User Avatar" class="user-avatar-small">
+                            <span>Lakshmi's SHG</span>
+                            <i class="fas fa-chevron-down"></i>
+                        </a>
+                        <ul class="user-dropdown">
+                            <li><a href="seller-dashboard.html"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                            <li><a href="seller-products.html"><i class="fas fa-box"></i> My Products</a></li>
+                            <li><a href="seller-orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                            <li><a href="seller-profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                            <li><a href="seller-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="index.html"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="dashboard-section">
+        <div class="container">
+            <div class="dashboard">
+                <div class="dashboard-sidebar">
+                    <div class="user-profile">
+                        <div class="user-avatar">
+                            <img src="images/user-avatar.jpg" alt="User Avatar">
+                        </div>
+                        <div class="user-info">
+                            <h3>Lakshmi's SHG</h3>
+                            <p>Tamil Nadu</p>
+                        </div>
+                    </div>
+                    <div class="dashboard-menu">
+                        <ul>
+                            <li><a href="seller-dashboard.html" class="active"><i class="fas fa-tachometer-alt"></i> Dashboard</a></li>
+                            <li><a href="seller-products.html"><i class="fas fa-box"></i> My Products</a></li>
+                            <li><a href="seller-add-product.html"><i class="fas fa-plus-circle"></i> Add New Product</a></li>
+                            <li><a href="seller-orders.html"><i class="fas fa-shopping-cart"></i> Orders</a></li>
+                            <li><a href="seller-customers.html"><i class="fas fa-users"></i> Customers</a></li>
+                            <li><a href="seller-video-calls.html"><i class="fas fa-video"></i> Video Calls</a></li>
+                            <li><a href="seller-analytics.html"><i class="fas fa-chart-bar"></i> Analytics</a></li>
+                            <li><a href="seller-profile.html"><i class="fas fa-user-circle"></i> Profile</a></li>
+                            <li><a href="seller-settings.html"><i class="fas fa-cog"></i> Settings</a></li>
+                            <li><a href="seller-help.html"><i class="fas fa-question-circle"></i> Help & Support</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dashboard-content">
+                    <div class="dashboard-header">
+                        <h2>Seller Dashboard</h2>
+                        <div class="date-filter">
+                            <select>
+                                <option>Last 7 Days</option>
+                                <option>Last 30 Days</option>
+                                <option>Last 3 Months</option>
+                                <option>Last Year</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-shopping-cart"></i>
+                            </div>
+                            <h3>24</h3>
+                            <p>Total Orders</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-rupee-sign"></i>
+                            </div>
+                            <h3>₹18,450</h3>
+                            <p>Revenue</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-box"></i>
+                            </div>
+                            <h3>12</h3>
+                            <p>Products Listed</p>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-icon">
+                                <i class="fas fa-video"></i>
+                            </div>
+                            <h3>8</h3>
+                            <p>Video Calls</p>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-row">
+                        <div class="dashboard-card recent-orders">
+                            <div class="card-header">
+                                <h3>Recent Orders</h3>
+                                <a href="seller-orders.html" class="view-all">View All</a>
+                            </div>
+                            <div class="card-content">
+                                <table class="data-table">
+                                    <thead>
+                                        <tr>
+                                            <th>Order ID</th>
+                                            <th>Customer</th>
+                                            <th>Product</th>
+                                            <th>Amount</th>
+                                            <th>Status</th>
+                                            <th>Action</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>#ORD-2305</td>
+                                            <td>Rajiv Sharma</td>
+                                            <td>Handloom Cotton Saree</td>
+                                            <td>₹1,800</td>
+                                            <td><span class="status-badge pending">Processing</span></td>
+                                            <td><a href="#" class="btn-sm">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#ORD-2304</td>
+                                            <td>Priya Patel</td>
+                                            <td>Terracotta Pottery Set</td>
+                                            <td>₹850</td>
+                                            <td><span class="status-badge shipped">Shipped</span></td>
+                                            <td><a href="#" class="btn-sm">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#ORD-2303</td>
+                                            <td>Amit Kumar</td>
+                                            <td>Organic Basmati Rice (5kg)</td>
+                                            <td>₹600</td>
+                                            <td><span class="status-badge completed">Delivered</span></td>
+                                            <td><a href="#" class="btn-sm">View</a></td>
+                                        </tr>
+                                        <tr>
+                                            <td>#ORD-2302</td>
+                                            <td>Sunita Reddy</td>
+                                            <td>Handloom Cotton Saree</td>
+                                            <td>₹1,800</td>
+                                            <td><span class="status-badge completed">Delivered</span></td>
+                                            <td><a href="#" class="btn-sm">View</a></td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-row">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Top Selling Products</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="product-performance">
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <img src="images/product-3.jpg" alt="Handloom Cotton Saree">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Handloom Cotton Saree</h4>
+                                            <div class="product-stats">
+                                                <span><i class="fas fa-shopping-cart"></i> 12 Orders</span>
+                                                <span><i class="fas fa-rupee-sign"></i> ₹21,600 Revenue</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 75%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <img src="images/product-2.jpg" alt="Terracotta Pottery Set">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Terracotta Pottery Set</h4>
+                                            <div class="product-stats">
+                                                <span><i class="fas fa-shopping-cart"></i> 8 Orders</span>
+                                                <span><i class="fas fa-rupee-sign"></i> ₹6,800 Revenue</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 60%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="product-item">
+                                        <div class="product-image">
+                                            <img src="images/product-6.jpg" alt="Bamboo Home Decor Set">
+                                        </div>
+                                        <div class="product-details">
+                                            <h4>Bamboo Home Decor Set</h4>
+                                            <div class="product-stats">
+                                                <span><i class="fas fa-shopping-cart"></i> 4 Orders</span>
+                                                <span><i class="fas fa-rupee-sign"></i> ₹4,800 Revenue</span>
+                                            </div>
+                                            <div class="progress-bar">
+                                                <div class="progress" style="width: 40%;"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Upcoming Video Calls</h3>
+                                <a href="seller-video-calls.html" class="view-all">View All</a>
+                            </div>
+                            <div class="card-content">
+                                <div class="upcoming-calls">
+                                    <div class="call-item">
+                                        <div class="call-time">
+                                            <div class="call-date">Today</div>
+                                            <div class="call-hour">14:30</div>
+                                        </div>
+                                        <div class="call-details">
+                                            <h4>Product Demo: Handloom Sarees</h4>
+                                            <p>With: Anita Desai (Restaurant Owner)</p>
+                                        </div>
+                                        <div class="call-actions">
+                                            <a href="video-call.html" class="btn btn-primary btn-sm">Join</a>
+                                        </div>
+                                    </div>
+                                    <div class="call-item">
+                                        <div class="call-time">
+                                            <div class="call-date">Tomorrow</div>
+                                            <div class="call-hour">11:00</div>
+                                        </div>
+                                        <div class="call-details">
+                                            <h4>Product Demo: Pottery Collection</h4>
+                                            <p>With: Rajesh Gupta (Home Decor Store)</p>
+                                        </div>
+                                        <div class="call-actions">
+                                            <a href="#" class="btn btn-outline btn-sm">Reschedule</a>
+                                        </div>
+                                    </div>
+                                    <div class="call-item">
+                                        <div class="call-time">
+                                            <div class="call-date">23 Jun</div>
+                                            <div class="call-hour">16:15</div>
+                                        </div>
+                                        <div class="call-details">
+                                            <h4>Bulk Order Discussion</h4>
+                                            <p>With: Meera Textiles (Retailer)</p>
+                                        </div>
+                                        <div class="call-actions">
+                                            <a href="#" class="btn btn-outline btn-sm">Reschedule</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard-row">
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Customer Locations</h3>
+                            </div>
+                            <div class="card-content">
+                                <div id="customer-map" class="map-container">
+                                    <!-- Map would be rendered here using a mapping library -->
+                                    <img src="images/india-map.jpg" alt="Customer Map" class="placeholder-map">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard-card">
+                            <div class="card-header">
+                                <h3>Recent Reviews</h3>
+                            </div>
+                            <div class="card-content">
+                                <div class="reviews-list">
+                                    <div class="review-item">
+                                        <div class="review-header">
+                                            <div class="reviewer">
+                                                <img src="images/customer-1.jpg" alt="Customer">
+                                                <div>
+                                                    <h4>Priya Patel</h4>
+                                                    <div class="rating">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="review-date">2 days ago</div>
+                                        </div>
+                                        <p class="review-text">The pottery set is beautiful! The craftsmanship is excellent and the video call helped me see the details before purchasing.</p>
+                                        <div class="review-product">Product: Terracotta Pottery Set</div>
+                                    </div>
+                                    <div class="review-item">
+                                        <div class="review-header">
+                                            <div class="reviewer">
+                                                <img src="images/customer-2.jpg" alt="Customer">
+                                                <div>
+                                                    <h4>Rajiv Sharma</h4>
+                                                    <div class="rating">
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="fas fa-star"></i>
+                                                        <i class="far fa-star"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="review-date">1 week ago</div>
+                                        </div>
+                                        <p class="review-text">The saree's quality is excellent. My wife loves the traditional design and natural dyes. Will order more soon.</p>
+                                        <div class="review-product">Product: Handloom Cotton Saree</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>KrishiBandhu</h3>
+                    <p>Empowering rural communities through digital connectivity and direct market access.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Sellers</h3>
+                    <ul>
+                        <li><a href="seller-register.html">Register</a></li>
+                        <li><a href="seller-guide.html">Seller Guide</a></li>
+                        <li><a href="seller-dashboard.html">Dashboard</a></li>
+                        <li><a href="seller-support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Buyers</h3>
+                    <ul>
+                        <li><a href="buyer-register.html">Register</a></li>
+                        <li><a href="buyer-guide.html">Buyer Guide</a></li>
+                        <li><a href="buyer-dashboard.html">Dashboard</a></li>
+                        <li><a href="buyer-support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 KrishiBandhu. All rights reserved.</p>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

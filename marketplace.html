@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marketplace - KrishiBandhu</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <img src="images/logo.png" alt="KrishiBandhu Logo">
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="marketplace.html" class="active">Marketplace</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li class="auth-buttons">
+                        <a href="login.html" class="btn btn-outline">Login</a>
+                        <a href="register.html" class="btn btn-primary">Register</a>
+                    </li>
+                </ul>
+            </nav>
+            <div class="mobile-menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <section class="page-header">
+        <div class="container">
+            <h1>Marketplace</h1>
+            <p>Discover authentic products directly from rural producers</p>
+        </div>
+    </section>
+
+    <section class="marketplace">
+        <div class="container">
+            <div class="product-filters">
+                <div class="search-box">
+                    <input type="text" class="search-input" placeholder="Search for products, categories, or locations...">
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="filter-options">
+                    <h3>Categories</h3>
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-filter="all">All Products</button>
+                        <button class="filter-btn" data-filter="agriculture">Agriculture</button>
+                        <button class="filter-btn" data-filter="handicrafts">Handicrafts</button>
+                        <button class="filter-btn" data-filter="textiles">Textiles</button>
+                        <button class="filter-btn" data-filter="food">Food Products</button>
+                    </div>
+                </div>
+
+                <div class="filter-options">
+                    <h3>Location</h3>
+                    <select class="location-filter">
+                        <option value="all">All Locations</option>
+                        <option value="north">North India</option>
+                        <option value="south">South India</option>
+                        <option value="east">East India</option>
+                        <option value="west">West India</option>
+                        <option value="central">Central India</option>
+                        <option value="northeast">Northeast India</option>
+                    </select>
+                </div>
+
+                <div class="filter-options">
+                    <h3>Price Range</h3>
+                    <div class="price-range">
+                        <input type="range" min="0" max="10000" value="10000" class="price-slider" id="price-range">
+                        <div class="price-values">
+                            <span>₹0</span>
+                            <span class="price-max">₹10,000+</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="active-filters">
+                    <div class="filter-tag">
+                        Agriculture <i class="fas fa-times"></i>
+                    </div>
+                    <div class="filter-tag">
+                        South India <i class="fas fa-times"></i>
+                    </div>
+                    <div class="filter-tag">
+                        Under ₹5,000 <i class="fas fa-times"></i>
+                    </div>
+                </div>
+            </div>
+
+            <div class="product-grid">
+                <!-- Product 1 -->
+                <div class="product-card agriculture">
+                    <div class="product-image">
+                        <img src="images/rice.png" alt="Organic Rice">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Organic Basmati Rice</h3>
+                        <div class="product-meta">
+                            <span class="seller">Kisan SHG, Punjab</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <p class="product-description">Premium quality organic basmati rice grown without chemicals. Available in bulk quantities.</p>
+                        <div class="product-price">₹120/kg</div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn btn-outline">View Details</a>
+                            <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i> Live View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card handicrafts">
+                    <div class="product-image">
+                        <img src="images/pot.png" alt="Handmade Pottery">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Terracotta Pottery Set</h3>
+                        <div class="product-meta">
+                            <span class="seller">Mati Kala SHG, West Bengal</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <p class="product-description">Traditional handcrafted terracotta pottery set including 4 cups and 1 pitcher.</p>
+                        <div class="product-price">₹850/set</div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn btn-outline">View Details</a>
+                            <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i> Live View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card textiles">
+                    <div class="product-image">
+                        <img src="images/saree.png" alt="Handloom Saree">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Handloom Cotton Saree</h3>
+                        <div class="product-meta">
+                            <span class="seller">Bunkar Mahila SHG, Tamil Nadu</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <p class="product-description">Handwoven cotton saree with traditional designs. Natural dyes used.</p>
+                        <div class="product-price">₹1,800</div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn btn-outline">View Details</a>
+                            <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i> Live View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 4 -->
+                <div class="product-card food">
+                    <div class="product-image">
+                        <img src="images/honey.png" alt="Organic Honey">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Wild Forest Honey</h3>
+                        <div class="product-meta">
+                            <span class="seller">Adivasi Honey Collectors, Jharkhand</span>
+                            <span class="rating"><i class="fas fa-star"></i> 5.0</span>
+                        </div>
+                        <p class="product-description">Pure, unprocessed wild honey collected from forest areas. Rich in nutrients.</p>
+                        <div class="product-price">₹450/500g</div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn btn-outline">View Details</a>
+                            <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i> Live View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 5 -->
+                <div class="product-card agriculture">
+                    <div class="product-image">
+                        <img src="images/spice.png" alt="Organic Spices">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Organic Spice Collection</h3>
+                        <div class="product-meta">
+                            <span class="seller">Spice Growers Collective, Kerala</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <p class="product-description">Set of 6 organic spices including turmeric, cardamom, and black pepper.</p>
+                        <div class="product-price">₹750/set</div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn btn-outline">View Details</a>
+                            <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i> Live View</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Product 6 -->
+                <div class="product-card handicrafts">
+                    <div class="product-image">
+                        <img src="images/bamboo.png" alt="Bamboo Crafts">
+                    </div>
+                    <div class="product-details">
+                        <h3 class="product-title">Bamboo Home Decor Set</h3>
+                        <div class="product-meta">
+                            <span class="seller">Bamboo Artisans, Assam</span>
+                            <span class="rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <p class="product-description">Eco-friendly bamboo home decor items including baskets, lamp shades, and coasters.</p>
+                        <div class="product-price">₹1,200/set</div>
+                        <div class="product-actions">
+                            <a href="product-detail.html" class="btn btn-outline">View Details</a>
+                            <button class="btn btn-primary video-call-btn"><i class="fas fa-video"></i> Live View</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pagination">
+                <a href="#" class="active">1</a>
+                <a href="#">2</a>
+                <a href="#">3</a>
+                <a href="#">4</a>
+                <a href="#"><i class="fas fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <section class="cta">
+        <div class="container">
+            <h2>Are You a Rural Producer?</h2>
+            <p>Join KrishiBandhu today and connect directly with buyers across India. Showcase your products and grow your business.</p>
+            <div class="cta-buttons">
+                <a href="seller-register.html" class="btn btn-primary">Register as Seller</a>
+                <a href="seller-guide.html" class="btn btn-outline">Learn How It Works</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-columns">
+                <div class="footer-column">
+                    <h3>KrishiBandhu</h3>
+                    <p>Empowering rural communities through digital connectivity and direct market access.</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-column">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="marketplace.html">Marketplace</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="faq.html">FAQ</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Sellers</h3>
+                    <ul>
+                        <li><a href="seller-register.html">Register</a></li>
+                        <li><a href="seller-guide.html">Seller Guide</a></li>
+                        <li><a href="seller-dashboard.html">Dashboard</a></li>
+                        <li><a href="seller-support.html">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h3>For Buyers</h3>
+                    <ul>
+                        <li><a href="buyer-register.html">Register</a></li>
+                        <li><a href="buyer-guide.html">Buyer Guide</a></li>
+                        <li><a href="buyer-dashboard.html">Dashboard</a></li>
+                        <li><a href="buyer-support.html">Support</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 KrishiBandhu. All rights reserved.</p>
+                <ul>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="terms.html">Terms of Service</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Category filter buttons
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+
+            // Price range slider
+            const priceSlider = document.getElementById('price-range');
+            const priceMax = document.querySelector('.price-max');
+            
+            priceSlider.addEventListener('input', function() {
+                const value = this.value;
+                priceMax.textContent = value >= 10000 ? '₹10,000+' : `₹${value}`;
+            });
+
+            // Filter tags
+            const filterTags = document.querySelectorAll('.filter-tag');
+            filterTags.forEach(tag => {
+                const closeBtn = tag.querySelector('i');
+                closeBtn.addEventListener('click', function() {
+                    tag.remove();
+                });
+            });
+
+            // Search input enhancement
+            const searchInput = document.querySelector('.search-input');
+            searchInput.addEventListener('focus', function() {
+                this.parentElement.style.boxShadow = '0 0 0 3px rgba(76, 175, 80, 0.1)';
+            });
+            
+            searchInput.addEventListener('blur', function() {
+                this.parentElement.style.boxShadow = 'none';
+            });
+        });
+    </script>
+</body>
+</html>
